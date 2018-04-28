@@ -1,0 +1,8 @@
+---
+homebrew_taps: []
+
+homebrew_packages: []
+
+homebrew_cask_dir: /Applications
+
+homebrew_cask_apps: []
