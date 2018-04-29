@@ -1,38 +1,56 @@
-Role Name
-=========
+# osx-bootstrap-homebrew
 
-A brief description of the role goes here.
+The role to install Homebrew, add taps, install packages via homebrew and mac os applications via homebrew cask.
 
-Requirements
-------------
+## Requirements
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+No.
 
-Role Variables
---------------
+## Role Variables
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+* ```homebrew_taps``` -- list of taps to add;
+* ```homebrew_packages``` -- list of packages to install;
+* ```homebrew_packages_with_args``` -- list of packages with some extra installation arguments;
+* ```homebrew_cask_dir``` -- directory for applications installed with homebrew cask;
+* ```homebrew_cask_apps``` -- list of applications to install.
 
-Dependencies
-------------
+## Dependencies
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+No.
 
-Example Playbook
-----------------
+## Example Playbook
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+```playbook.yml```:
+```yml
+---
+- host: localhost
+  vars_files:
+    - vars/homebrew.yml
+  roles:
+    - 0x4e3.osx-bootstrap-homebrew
+```
 
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
+```vars/homebrew.yml```
+```yml
+---
+---
+homebrew_taps:
+  - homebrew/core
+  - homebrew/services
+  - caskroom/cask
+  - petere/postgresql
 
-License
--------
+homebrew_packages:
+  - cowsay
+
+homebrew_packages_with_args:
+  - name: freetds
+    args: "with-msdblib,with-odbc-wide,with-unixodbc"
+
+homebrew_cask_apps:
+  - sublime-text
+```
+
+## License
 
 BSD
-
-Author Information
-------------------
-
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).

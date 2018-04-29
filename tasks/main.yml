@@ -11,15 +11,15 @@
 
 - name: Install homebrew packages
   homebrew:
-    name: {{ item }}
+    name: "{{ item }}"
     state: present
   with_items: "{{ homebrew_packages }}"
 
 - name: Install homebrew packages with extra installation arguments.
   homebrew:
-    name: {{ item.name }}
+    name: "{{ item.name }}"
     state: present
-    install_optiotns: {{ item.args }}
+    install_optiotns: "{{ item.args }}"
   with_items: "{{ homebrew_packages_with_args }}"
 
 - name: Install cask applications
