@@ -19,7 +19,7 @@
   homebrew:
     name: "{{ item.name }}"
     state: present
-    install_optiotns: "{{ item.args }}"
+    install_options: "{{ item.args }}"
   with_items: "{{ homebrew_packages_with_args }}"
 
 - name: Install cask applications
