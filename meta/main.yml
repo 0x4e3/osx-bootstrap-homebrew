@@ -6,6 +6,10 @@ galaxy_info:
   platforms:
   - name: MacOSX
     versions:
-    - 10.13
+    - 10.11
+    - 10.12
+  galaxy_tags:
+  - packaging
+  - osx
 
 dependencies: []
