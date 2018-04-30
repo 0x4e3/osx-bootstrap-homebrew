@@ -1,20 +1,5 @@
 galaxy_info:
   author: Alexander Lebedev
   description: Ansible role for Mac OS bootstrap —- homebrew.
-  company: 0x4e3
-
-  license: BSD
-
-  min_ansible_version: 1.2
-
-  platforms:
-  - name: MacOSX
-    versions:
-    - 10.11
-    - 10.12
-    - 10.13
-
-  galaxy_tags:
-  - packaging
 
 dependencies: []
