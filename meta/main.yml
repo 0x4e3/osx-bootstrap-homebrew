@@ -3,7 +3,7 @@ galaxy_info:
   description: Ansible role for Mac OS bootstrap —- homebrew.
   company: 0x4e3
 
-  license: license (BSD, MIT)
+  license: BSD
 
   min_ansible_version: 1.2
 
