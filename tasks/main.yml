@@ -28,3 +28,4 @@
     state: present
     install_options: "appdir={{ homebrew_cask_dir }}"
   with_items: "{{ homebrew_cask_apps }}"
+  ignore_errors: yes
