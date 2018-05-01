@@ -3,7 +3,6 @@
 The role to install Homebrew, add taps, install packages via homebrew and mac os applications via homebrew cask.
 
 [![Build Status](https://travis-ci.org/0x4e3/osx-bootstrap-homebrew.svg?branch=master)](https://travis-ci.org/0x4e3/osx-bootstrap-homebrew)
-
 [![GitHub license](https://img.shields.io/github/license/0x4e3/osx-bootstrap-homebrew.svg)](https://github.com/0x4e3/osx-bootstrap-homebrew/blob/master/LICENSE)
 
 ## Requirements
